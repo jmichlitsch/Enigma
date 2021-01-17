@@ -11,8 +11,8 @@ class OffsetTest < Minitest::Test
   end
 
   def test_sqaure_date
-    offset = Offset.new("12345","260818")
+    offset = Offset.new("12345","160121")
 
-    assert_equal 0, offset.square_date
+    assert_equal 25638734641, offset.square_date
   end
 end
