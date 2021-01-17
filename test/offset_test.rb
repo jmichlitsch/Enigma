@@ -32,4 +32,5 @@ class OffsetTest < Minitest::Test
     offset = Offset.new("12345","160121")
 
     assert_equal [12, 23, 34, 45], offset.key_array
+  end
 end
