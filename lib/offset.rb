@@ -14,9 +14,9 @@ class Offset
 
     def date_array
       a_offset = last_four_date.to_s[0].to_i
-      b_offset = last_four_date[1]
-      c_offset = last_four_date[2]
-      d_offset = last_four_date[3]
+      b_offset = last_four_date.to_s[1].to_i
+      c_offset = last_four_date.to_s[2].to_i
+      d_offset = last_four_date.to_s[3].to_i
 
       [a_offset, b_offset, c_offset, d_offset]
     end
