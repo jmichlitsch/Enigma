@@ -26,4 +26,5 @@ class OffsetTest < Minitest::Test
     offset = Offset.new("12345","160121")
 
     assert_equal [4,6,4,1], offset.date_array
+  end
 end

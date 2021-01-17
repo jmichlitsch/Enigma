@@ -12,4 +12,12 @@ class Offset
       square_date.to_s[-4..-1].to_i
     end
 
+    def date_array
+      array = []
+      a_offset = last_four_date[0]
+      b_offset = last_four_date[1]
+      c_offset = last_four_date[2]
+      d_offset = last_four_date[3]
+    end
+
 end
