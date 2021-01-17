@@ -10,10 +10,16 @@ class EnigmaTest < Minitest::Test
     assert_instance_of Enigma, enigma
   end
 
-  def test_encrypt
+  def test_encrypt_letter
     enigma = Enigma.new
-    message = "message"
 
-    assert_equal "1234567", enigma.encrypt("message")
+    assert_equal 1, enigma.encrypt_letter
+  end
+
+  # def test_encrypt
+  #   enigma = Enigma.new
+  #   message = "message"
+  #
+  #   assert_equal "1234567", enigma.encrypt("message")
   end
 end
