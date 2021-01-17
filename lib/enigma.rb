@@ -30,7 +30,9 @@ class Enigma
                               " " => 27}
   end
 
-  def encrypt(message, key = Array.new(0..9).sample, date = Date.today.strftime("%d%m%y"))
+  def encrypt(message,
+              key = Array.new(0..9).sample,
+              date = Date.today.strftime("%d%m%y"))
 
   end  
 end
