@@ -37,6 +37,6 @@ class OffsetTest < Minitest::Test
   def test_shift
     offset = Offset.new("12345","160121")
 
-    assert_equal [16, 29, 38, 46]
+    assert_equal [16, 29, 38, 46], offset.shift
   end
 end

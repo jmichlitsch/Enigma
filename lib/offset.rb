@@ -29,4 +29,11 @@ class Offset
       [a_key, b_key, c_key, d_key]
     end
 
+    def shift
+      a_shift = key_array[0] + date_array[0]
+      b_shift = key_array[1] + date_array[1]
+      c_shift = key_array[2] + date_array[2]
+      d_shift = key_array[3] + date_array[3]
+      [a_shift, b_shift, c_shift, d_shift]
+    end
 end
