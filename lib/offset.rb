@@ -7,4 +7,8 @@ class Offset
     def square_date
       @date**2
     end
+
+    def last_four_date
+
+    end  
 end
