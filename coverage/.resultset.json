@@ -1,43 +1,17 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/Users/jeremiahmichlitsch/Turing/Mod_1/Projects/Enigma/lib/enigma.rb": {
+      "/Users/jeremiahmichlitsch/Turing/Mod_1/Projects/Enigma/lib/offset.rb": {
         "lines": [
           1,
-          null,
           1,
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1610851419
+    "timestamp": 1610853819
   }
 }
