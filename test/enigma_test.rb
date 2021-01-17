@@ -14,6 +14,6 @@ class EnigmaTest < Minitest::Test
     enigma = Enigma.new
     message = "message"
 
-    assert_equal "1234567", enigma.encrypt
+    assert_equal "1234567", enigma.encrypt("message")
   end
 end

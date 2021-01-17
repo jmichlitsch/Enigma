@@ -29,4 +29,8 @@ class Enigma
                               "z" => 26,
                               " " => 27}
   end
+
+  def encrypt(message, key = Array.new(0..9).sample, date = Date.today.strftime("%d%m%y"))
+
+  end  
 end
