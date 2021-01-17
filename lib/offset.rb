@@ -11,4 +11,5 @@ class Offset
     def last_four_date
       square_date.to_s[-4..-1].to_i
     end
+
 end
