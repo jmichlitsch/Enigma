@@ -43,4 +43,10 @@ class EnigmaTest < Minitest::Test
     assert_equal 19, enigma.decrypt_letter(2, scrammble, [16, 29, 38, 46])
     assert_equal 19, enigma.decrypt_letter(3, scrammble, [16, 29, 38, 46])
   end
+
+  def test_decryption
+    enigma = Enigma.new
+    scrammble = "bgckqip"
+
+    assert_equal "message", enigma.decryption(scrammble, "12345", "160121")
 end
