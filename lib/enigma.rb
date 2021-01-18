@@ -1,3 +1,4 @@
+require_relative "./offset"
 class Enigma
 
   def initialize
@@ -71,7 +72,6 @@ class Enigma
     message = ""
     for integer in 0..(scrammble.length-1) do
       new_position = decrypt_letter(integer,scrammble,shift)
-      # require 'pry'; binding.pry
       message += @character_integer_hash.key(new_position)
     end
     message
