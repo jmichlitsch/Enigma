@@ -31,21 +31,23 @@ class Enigma
   end
 
   def encrypt_letter(integer, message, shift)
-    @character_integer_hash[message[integer]] + shift[integer%4]
+    #use hash above to change letters into values and downcase every letter
+    @character_integer_hash[message.downcase[integer]] + shift[integer%4]
   end
 
   def encryption(message, shift)
-    final_string = ""
-    #go thru each letter in message with length -1
+    scrammble = ""
+    #go thru each letter in message with length -1 moving thru each letter
     for integer in 0..(message.length-1) do
       new_character_position = encrypt_letter(integer,message,shift)
-      #go thru all letters and space with 27
+      #go thru all letters and space with 27, if over 28 subtract 27 from it
       while (new_character_position >= 28)
         new_character_position -= 27
       end
-      final_string += @character_integer_hash.key(new_character_position)
+      #change value back into letter to have
+      scrammble += @character_integer_hash.key(new_character_position)
     end
-    final_string
+    scrammble
   end
 
   def encrypt(message,

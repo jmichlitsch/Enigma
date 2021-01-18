@@ -13,7 +13,7 @@ class EnigmaTest < Minitest::Test
 
   def test_encrypt_letter
     enigma = Enigma.new
-    message = "message"
+    message = "Message"
     assert_equal 29, enigma.encrypt_letter(0, message,[16, 29, 38, 46])
     assert_equal 34, enigma.encrypt_letter(1, message,[16, 29, 38, 46])
     assert_equal 57, enigma.encrypt_letter(2, message,[16, 29, 38, 46])
@@ -32,5 +32,16 @@ class EnigmaTest < Minitest::Test
     message = "message"
 
     assert_equal "bgckqip", enigma.encrypt(message, "12345","160121")
-end
+  end
+
+  def test_decrypt_letter
+    skip
+    enigma = Enigma.new
+    scrammble = "bgckqip"
+
+    assert_equal 1, enigma.decrypt_letter(0, scrammble, [16, 29, 38, 46])
+    assert_equal 2, enigma.decrypt_letter(1, scrammble, [16, 29, 38, 46])
+    assert_equal 3, enigma.decrypt_letter(2, scrammble, [16, 29, 38, 46])
+    assert_equal 4, enigma.decrypt_letter(3, scrammble, [16, 29, 38, 46])
+  end
 end

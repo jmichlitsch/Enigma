@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-17T20:09:08-07:00">2021-01-17T20:09:08-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-01-18T14:28:10-07:00">2021-01-18T14:28:10-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -73,7 +73,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#48f00810608e7c7b4abd6d3c12da75dac769147f" class="src_link" title="lib/enigma.rb">lib/enigma.rb</a></td>
             <td class="green strong cell--number t-file__coverage">94.12 %</td>
-            <td class="cell--number">57</td>
+            <td class="cell--number">59</td>
             <td class="cell--number">17</td>
             <td class="cell--number">16</td>
             <td class="cell--number">1</td>
@@ -499,24 +499,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="34">
+          <li class="never" data-hits="" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby">    #use hash above to change letters into values and downcase every letter</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="18" data-linenumber="35">
             <span class="hits">18</span>
             
 
             
 
-            <code class="ruby">    @character_integer_hash[message[integer]] + shift[integer%4]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="35">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
+            <code class="ruby">    @character_integer_hash[message.downcase[integer]] + shift[integer%4]</code>
           </li>
         </div>
       
@@ -527,12 +527,23 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="37">
+          <li class="covered" data-hits="1" data-linenumber="38">
             <span class="hits">1</span>
             
 
@@ -543,29 +554,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="38">
+          <li class="covered" data-hits="2" data-linenumber="39">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    final_string = &quot;&quot;</code>
+            <code class="ruby">    scrammble = &quot;&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="40">
             
             
 
             
 
-            <code class="ruby">    #go thru each letter in message with length -1</code>
+            <code class="ruby">    #go thru each letter in message with length -1 moving thru each letter</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="40">
+          <li class="covered" data-hits="2" data-linenumber="41">
             <span class="hits">2</span>
             
 
@@ -576,7 +587,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="14" data-linenumber="41">
+          <li class="covered" data-hits="14" data-linenumber="42">
             <span class="hits">14</span>
             
 
@@ -587,18 +598,18 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 
             
 
-            <code class="ruby">      #go thru all letters and space with 27</code>
+            <code class="ruby">      #go thru all letters and space with 27, if over 28 subtract 27 from it</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="44" data-linenumber="43">
+          <li class="covered" data-hits="44" data-linenumber="44">
             <span class="hits">44</span>
             
 
@@ -609,7 +620,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="16" data-linenumber="44">
+          <li class="covered" data-hits="16" data-linenumber="45">
             <span class="hits">16</span>
             
 
@@ -620,7 +631,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
@@ -631,35 +642,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="14" data-linenumber="46">
-            <span class="hits">14</span>
-            
-
-            
-
-            <code class="ruby">      final_string += @character_integer_hash.key(new_character_position)</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="never" data-hits="" data-linenumber="47">
             
             
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">      #change value back into letter to have</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="48">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="14" data-linenumber="48">
+            <span class="hits">14</span>
             
 
             
 
-            <code class="ruby">    final_string</code>
+            <code class="ruby">      scrammble += @character_integer_hash.key(new_character_position)</code>
           </li>
         </div>
       
@@ -670,12 +670,34 @@
 
             
 
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="50">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    scrammble</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="51">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
+          <li class="never" data-hits="" data-linenumber="52">
             
             
 
@@ -686,7 +708,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="51">
+          <li class="covered" data-hits="1" data-linenumber="53">
             <span class="hits">1</span>
             
 
@@ -697,7 +719,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="52">
+          <li class="missed" data-hits="0" data-linenumber="54">
             
             
 
@@ -708,7 +730,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
+          <li class="never" data-hits="" data-linenumber="55">
             
             
 
@@ -719,7 +741,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
+          <li class="covered" data-hits="1" data-linenumber="56">
             <span class="hits">1</span>
             
 
@@ -730,7 +752,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="55">
+          <li class="covered" data-hits="1" data-linenumber="57">
             <span class="hits">1</span>
             
 
@@ -741,7 +763,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="56">
+          <li class="never" data-hits="" data-linenumber="58">
             
             
 
@@ -752,7 +774,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
+          <li class="never" data-hits="" data-linenumber="59">
             
             
 
