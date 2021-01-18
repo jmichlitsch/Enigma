@@ -1,8 +1,8 @@
 require_relative './test_helper'
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/enigma'
-require './lib/offset'
+require_relative '../lib/enigma'
+require_relative '../lib/offset'
 
 class EnigmaTest < Minitest::Test
   def test_it_exists
