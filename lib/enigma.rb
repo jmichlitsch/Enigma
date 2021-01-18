@@ -52,7 +52,7 @@ class Enigma
   end
 
   def encrypt(message,
-              key = Array.new(5){rand(0..9)}.join.to_s,
+              key = Key.new.key_generator,
               date = Date.today.strftime("%d%m%y"))
     shift = Offset.new(key,date).shift
     encrypted = encryption(message,shift)
@@ -78,7 +78,7 @@ class Enigma
   end
 
   def decrypt(scrammble,
-              key = Array.new(5){rand(0..9)}.join.to_s,
+              key = Key.new.key_generator,
               date = Date.today.strftime("%d%m%y"))
     shift = Offset.new(key,date).shift
     decrypted = decryption(scrammble,shift)
