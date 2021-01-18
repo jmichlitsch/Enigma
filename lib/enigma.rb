@@ -56,4 +56,14 @@ class Enigma
     shift = Offset.new(key,date).shift
     encrypted = encryption(message,shift)
   end
+
+  def decrypt_letter(integer, scrammble, shift)
+    #need to do the opposite of encrypt
+    number = @character_integer_hash[scrammble.downcase[integer]] - shift[integer%4] +27
+    if number < 0
+      number + 27
+    else
+      number
+    end
+  end
 end

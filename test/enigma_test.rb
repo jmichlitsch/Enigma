@@ -35,13 +35,12 @@ class EnigmaTest < Minitest::Test
   end
 
   def test_decrypt_letter
-    skip
     enigma = Enigma.new
     scrammble = "bgckqip"
 
-    assert_equal 1, enigma.decrypt_letter(0, scrammble, [16, 29, 38, 46])
-    assert_equal 2, enigma.decrypt_letter(1, scrammble, [16, 29, 38, 46])
-    assert_equal 3, enigma.decrypt_letter(2, scrammble, [16, 29, 38, 46])
-    assert_equal 4, enigma.decrypt_letter(3, scrammble, [16, 29, 38, 46])
+    assert_equal 13, enigma.decrypt_letter(0, scrammble, [16, 29, 38, 46])
+    assert_equal 5, enigma.decrypt_letter(1, scrammble, [16, 29, 38, 46])
+    assert_equal 19, enigma.decrypt_letter(2, scrammble, [16, 29, 38, 46])
+    assert_equal 19, enigma.decrypt_letter(3, scrammble, [16, 29, 38, 46])
   end
 end
