@@ -12,8 +12,11 @@ class EnigmaTest < Minitest::Test
 
   def test_encrypt_letter
     enigma = Enigma.new
-
-    assert_equal 1, enigma.encrypt_letter
+    message = "message"
+    assert_equal 29, enigma.encrypt_letter(0, message,[16, 29, 38, 46])
+    assert_equal 34, enigma.encrypt_letter(1, message,[16, 29, 38, 46])
+    assert_equal 57, enigma.encrypt_letter(2, message,[16, 29, 38, 46])
+    assert_equal 65, enigma.encrypt_letter(3, message,[16, 29, 38, 46])
   end
 
   # def test_encrypt
@@ -21,5 +24,5 @@ class EnigmaTest < Minitest::Test
   #   message = "message"
   #
   #   assert_equal "1234567", enigma.encrypt("message")
-  end
+# end
 end

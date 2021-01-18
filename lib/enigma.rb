@@ -30,9 +30,9 @@ class Enigma
                               " " => 27}
   end
 
-  def encrypt_letter
-
-  end  
+  def encrypt_letter(integer, message, shift)
+    @character_integer_hash[message[integer]] + shift[integer%4]
+  end
   # def encrypt(message,
   #             key = Array.new(0..9).sample,
   #             date = Date.today.strftime("%d%m%y"))
