@@ -13,40 +13,50 @@ class EnigmaTest < Minitest::Test
 
   def test_encrypt_letter
     enigma = Enigma.new
-    message = "Message"
-    assert_equal 29, enigma.encrypt_letter(0, message,[16, 29, 38, 46])
-    assert_equal 34, enigma.encrypt_letter(1, message,[16, 29, 38, 46])
-    assert_equal 57, enigma.encrypt_letter(2, message,[16, 29, 38, 46])
-    assert_equal 65, enigma.encrypt_letter(3, message,[16, 29, 38, 46])
+    message = "Turing"
+    assert_equal 36, enigma.encrypt_letter(0, message,[16, 29, 38, 46])
+    assert_equal 50, enigma.encrypt_letter(1, message,[16, 29, 38, 46])
+    assert_equal 56, enigma.encrypt_letter(2, message,[16, 29, 38, 46])
+    assert_equal 55, enigma.encrypt_letter(3, message,[16, 29, 38, 46])
   end
 
   def test_encryption
     enigma = Enigma.new
-    message = "message"
+    message = "turing"
     shift = [16, 29, 38, 46]
 
-    assert_equal "bgckqip", enigma.encryption(message, shift)
+    assert_equal "iwbaci", enigma.encryption(message, shift)
   end
   def test_encrypt
     enigma = Enigma.new
-    message = "message"
+    message = "turing"
 
-    assert_equal "bgckqip", enigma.encrypt(message, "12345","160121")
+    assert_equal "iwbaci", enigma.encrypt(message, "12345","160121")
   end
 
   def test_decrypt_letter
     enigma = Enigma.new
-    scrammble = "bgckqip"
+    scrammble = "iwbaci"
 
-    assert_equal 13, enigma.decrypt_letter(0, scrammble, [16, 29, 38, 46])
-    assert_equal 5, enigma.decrypt_letter(1, scrammble, [16, 29, 38, 46])
-    assert_equal 19, enigma.decrypt_letter(2, scrammble, [16, 29, 38, 46])
-    assert_equal 19, enigma.decrypt_letter(3, scrammble, [16, 29, 38, 46])
+    assert_equal 20, enigma.decrypt_letter(0, scrammble, [16, 29, 38, 46])
+    assert_equal 21, enigma.decrypt_letter(1, scrammble, [16, 29, 38, 46])
+    assert_equal 18, enigma.decrypt_letter(2, scrammble, [16, 29, 38, 46])
+    assert_equal 9, enigma.decrypt_letter(3, scrammble, [16, 29, 38, 46])
   end
 
   def test_decryption
     enigma = Enigma.new
-    scrammble = "bgckqip"
+    scrammble = "iwbaci"
+    shift = [16, 29, 38, 46]
 
-    assert_equal "message", enigma.decryption(scrammble, "12345", "160121")
+    assert_equal "turing", enigma.decryption(scrammble, shift)
+end
+
+  def test_decrypt
+    enigma = Enigma.new
+    scrammble = "iwbaci"
+    shift = [16, 29, 38, 46]
+
+    assert_equal "turing", enigma.decrypt(scrammble, "12345", "160121")
+  end
 end

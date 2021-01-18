@@ -59,11 +59,28 @@ class Enigma
 
   def decrypt_letter(integer, scrammble, shift)
     #need to do the opposite of encrypt
-    number = @character_integer_hash[scrammble.downcase[integer]] - shift[integer%4] +27
+    number = @character_integer_hash[scrammble[integer]] - shift[integer%4] +27
     if number < 0
       number + 27
     else
       number
     end
+  end
+
+  def decryption(scrammble, shift)
+    message = ""
+    for integer in 0..(scrammble.length-1) do
+      new_position = decrypt_letter(integer,scrammble,shift)
+      # require 'pry'; binding.pry
+      message += @character_integer_hash.key(new_position)
+    end
+    message
+  end
+
+  def decrypt(scrammble,
+              key = Array.new(5){rand(0..9)}.join.to_s,
+              date = Date.today.strftime("%d%m%y"))
+    shift = Offset.new(key,date).shift
+    decrypted = decryption(scrammble,shift)
   end
 end
