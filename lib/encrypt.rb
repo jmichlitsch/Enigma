@@ -7,9 +7,9 @@ message = ARGV[0]
 encrypted = ARGV[1]
 
 message = File.new(message, 'r').read.strip
-key = Key.new.key_generator
-date = Date.today.strftime("%d%m%y")
-scrammble = Enigma.new.encrypt(message,key)
+key = "12345"
+date = "160121"
+scrammble = Enigma.new.encrypt(message,key,date)
 
-encrypted = File.new(encrypted, 'a').write(scrammble)
-puts "Created '#{encrypted}' with the key #{key} and date #{date}"
+encryption = File.new(encrypted, 'a').write(scrammble)
+puts "Created '#{encryption}' with the key #{key} and date #{date}"
